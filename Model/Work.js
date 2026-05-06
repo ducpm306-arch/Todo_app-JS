@@ -15,16 +15,16 @@ export class Work {
     return this.#Id;
   }
   getName(Name) {
-    return this.Name;
+    return this.#Name;
   }
   getDate(Date) {
-    return this.Date;
+    return this.#Date;
   }
   getNote(Note) {
-    return this.Note;
+    return this.#Note;
   }
 
-  setId(ID) {
+  setId(Id) {
     this.#Id = Id;
   }
 

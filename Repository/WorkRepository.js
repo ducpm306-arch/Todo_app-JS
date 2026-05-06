@@ -3,7 +3,7 @@ import { Work } from "../Model/Work";
 export class WorkRepository {
   #Work = [];
 
-  view(work) {
+  view() {
     return [...this.#Work];
   }
 
@@ -11,8 +11,8 @@ export class WorkRepository {
     this.#Work.push(work);
   }
 
-  update(work) {
-    const work = this.#work.find((work) => work.id === id);
+  update(id, name, date, note) {
+    const work = this.#Work.find((w) => w.getId() === id);
     if (!work) return;
     work.name = name;
     work.date = date;
