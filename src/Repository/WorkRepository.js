@@ -14,12 +14,12 @@ export class WorkRepository {
   update(id, name, date, note) {
     const work = this.#Work.find((w) => w.getId() === id);
     if (!work) return;
-    work.setName = name;
-    work.setDate = date;
-    work.setNote = note;
+    work.setName(name);
+    work.setDate(date);
+    work.setNote(note);
   }
 
   delete(id) {
-    this.#Work = this.#Work.filter((work) => work.getId != id);
+    this.#Work = this.#Work.filter((w) => w.getId() !== id);
   }
 }
