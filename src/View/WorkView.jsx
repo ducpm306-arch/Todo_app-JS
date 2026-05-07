@@ -1,4 +1,10 @@
-export default function WorkView({ works, onAdd, onDelete, onStatusChange }) {
+export default function WorkView({
+  works,
+  onAdd,
+  onDelete,
+  onStatusChange,
+  onSearch,
+}) {
   return (
     <>
       <h2>Quản lý công việc</h2>
@@ -16,6 +22,14 @@ export default function WorkView({ works, onAdd, onDelete, onStatusChange }) {
         </select>
         <br />
         <button type="submit">Thêm</button>
+      </form>
+
+      <form onSearch={onSearch}>
+        <h2>Tìm kiếm công việc</h2>
+        <br />
+        Tìm kiếm: <input type="text" name="search" />
+        <br />
+        <button type="submit">Tìm kiếm</button> <br />
       </form>
 
       <h2>Danh sách công việc</h2>

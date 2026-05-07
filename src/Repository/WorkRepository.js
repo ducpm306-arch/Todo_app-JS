@@ -49,4 +49,13 @@ export class WorkRepository {
     this.#Work = this.#Work.filter((w) => w.getId() !== id);
     this.#save();
   }
+
+  search(id) {
+    this.#Work = this.#Work.filter(
+      (w) => w.getId(),
+      w.getName(),
+      w.getNote() === id,
+    );
+    this.#save;
+  }
 }

@@ -27,5 +27,19 @@ export function useWork() {
     setWorks(repo.view());
   };
 
+  const searchWork = (id, name, date, status, note) => {
+    const filterWork = repo
+      .view(id, name, date, status, note)
+      .filter((work) => {
+        return (
+          (!id || work.id === id) &&
+           !name || work.name.toLowerCase().includes(name.toLowerCase())) &&
+           !date || work.date === date) &&
+           !status || work.status === status) &&
+           !note || work.name.toLowerCase().includes(name.toLowerCase()))
+          );
+      });
+  };
+
   return { works, addWork, deleteWork, changeStatus };
 }
