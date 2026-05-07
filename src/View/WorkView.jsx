@@ -9,7 +9,7 @@ export default function WorkView({ works, onAdd, onDelete, onStatusChange }) {
         <br />
         Ghi chú: <input type="text" name="note" />
         <br />
-        Trạng thái:{" "}
+        Trạng thái:{""}
         <select name="status">
           <option value="Doing">Đang làm</option>
           <option value="Done">Đã xong</option>
