@@ -14,7 +14,7 @@ export class WorkRepository {
     if (!raw) return;
     const arr = JSON.parse(raw);
     this.#Work = arr.map(
-      (item) => new Work(item.id, item.name, item.date, item.note, item.status),
+      (item) => new Work(item.id, item.name, item.date, item.status, item.note),
     );
   }
 
@@ -23,8 +23,8 @@ export class WorkRepository {
       id: w.getId(),
       name: w.getName(),
       date: w.getDate(),
-      note: w.getNote(),
       status: w.getStatus(),
+      note: w.getNote(),
     }));
     localStorage.setItem(STORAGE_KEY, JSON.stringify(arr));
   }

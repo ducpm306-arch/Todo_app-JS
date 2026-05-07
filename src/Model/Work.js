@@ -2,15 +2,15 @@ export class Work {
   #Id;
   #Name;
   #Date;
+  #Status;
   #Note;
-  #Tag;
 
-  constructor(Id, Name, Date, Note) {
+  constructor(Id, Name, Date, Status, Note) {
     this.#Id = Id;
     this.#Name = Name;
     this.#Date = Date;
-    this.#Note = Note;
     this.#Status = Status;
+    this.#Note = Note;
   }
 
   getId() {
@@ -22,12 +22,13 @@ export class Work {
   getDate() {
     return this.#Date;
   }
-  getNote() {
-    return this.#Note;
-  }
 
   getStatus() {
     return this.#Status;
+  }
+
+  getNote() {
+    return this.#Note;
   }
 
   setId(Id) {
@@ -42,11 +43,11 @@ export class Work {
     this.#Date = Date;
   }
 
-  setNote(Note) {
-    this.#Note = Note;
-  }
-
   setStatus(Status) {
     this.#Status = Status;
+  }
+
+  setNote(Note) {
+    this.#Note = Note;
   }
 }

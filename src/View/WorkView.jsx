@@ -36,7 +36,15 @@ export default function WorkView({ works, onAdd, onDelete }) {
               <td>{w.getId()}</td>
               <td>{w.getName()}</td>
               <td>{w.getDate()}</td>
-              <td>{w.getStatus}</td>
+              <td>
+                <select
+                  value={w.getStatus()}
+                  onChange={(e) => onStatusChange(w.getId(), e.target.value)}
+                >
+                  <option value="Doing">Đang làm</option>
+                  <option value="Done">Đã xong</option>
+                </select>
+              </td>
               <td>{w.getNote()}</td>
               <td>
                 <button onClick={() => onDelete(w.getId())}>Xóa</button>
