@@ -9,8 +9,10 @@ export function useWork() {
 
   const addWork = (e) => {
     e.preventDefault();
-    const { name, date, note } = Object.fromEntries(new FormData(e.target));
-    repo.add(new Work(Date.now(), name, date, note));
+    const { name, date, status, note } = Object.fromEntries(
+      new FormData(e.target),
+    );
+    repo.add(new Work(Date.now(), name, date, status, note));
     setWorks(repo.view());
     e.target.reset();
   };

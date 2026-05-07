@@ -3,12 +3,14 @@ export class Work {
   #Name;
   #Date;
   #Note;
+  #Tag;
 
   constructor(Id, Name, Date, Note) {
     this.#Id = Id;
     this.#Name = Name;
     this.#Date = Date;
     this.#Note = Note;
+    this.#Status = Status;
   }
 
   getId() {
@@ -22,6 +24,10 @@ export class Work {
   }
   getNote() {
     return this.#Note;
+  }
+
+  getStatus() {
+    return this.#Status;
   }
 
   setId(Id) {
@@ -38,5 +44,9 @@ export class Work {
 
   setNote(Note) {
     this.#Note = Note;
+  }
+
+  setStatus(Status) {
+    this.#Status = Status;
   }
 }

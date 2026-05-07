@@ -1,4 +1,4 @@
-import { useWork } from "./Controller/useWork.jsx";
+import { useWork } from "./Controller/WorkController.jsx";
 import WorkView from "./View/WorkView.jsx";
 
 export default function App() {
