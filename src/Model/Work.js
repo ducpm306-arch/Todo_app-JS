@@ -14,13 +14,13 @@ export class Work {
   getId() {
     return this.#Id;
   }
-  getName(Name) {
+  getName() {
     return this.#Name;
   }
-  getDate(Date) {
+  getDate() {
     return this.#Date;
   }
-  getNote(Note) {
+  getNote() {
     return this.#Note;
   }
 
