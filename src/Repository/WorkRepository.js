@@ -37,6 +37,10 @@ export class WorkRepository {
     this.#save();
   }
 
+  update(work) {
+    this.#save();
+  }
+
   delete(id) {
     this.#Work = this.#Work.filter((w) => w.getId() !== id);
     this.#save();

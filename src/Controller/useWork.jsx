@@ -15,6 +15,8 @@ export function useWork() {
     e.target.reset();
   };
 
+  const updateWork = (e) => {};
+
   const deleteWork = (id) => {
     repo.delete(id);
     setWorks(repo.view());
