@@ -5,7 +5,7 @@ import { WorkRepository } from "../Repository/WorkRepository";
 const repo = new WorkRepository();
 
 export function useWork() {
-  const [works, setWorks] = useState([]);
+  const [works, setWorks] = useState(() => repo.view());
 
   const addWork = (e) => {
     e.preventDefault();

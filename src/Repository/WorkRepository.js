@@ -13,7 +13,7 @@ export class WorkRepository {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) return;
     const arr = JSON.parse(raw);
-    this.#Work.arr.map(
+    this.#Work = arr.map(
       (item) => new Work(item.id, item.name, item.date, item.note),
     );
   }
