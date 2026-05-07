@@ -39,7 +39,7 @@ export class WorkRepository {
   }
 
   changeStatus(id, status) {
-    const work = this.#Work.find((w) => w.getId === id);
+    const work = this.#Work.find((w) => w.getId() === id);
     if (!work) return;
     work.setStatus(status);
     this.#save();
