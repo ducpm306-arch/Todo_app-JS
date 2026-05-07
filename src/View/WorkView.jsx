@@ -1,4 +1,4 @@
-export default function WorkView({ works, onAdd, onDelete }) {
+export default function WorkView({ works, onAdd, onDelete, onStatusChange }) {
   return (
     <>
       <h2>Quản lý công việc</h2>
@@ -48,7 +48,6 @@ export default function WorkView({ works, onAdd, onDelete }) {
               <td>{w.getNote()}</td>
               <td>
                 <button onClick={() => onDelete(w.getId())}>Xóa</button>
-                <button onClick={() => onUpdate(w.getId())}>Sửa</button>
               </td>
             </tr>
           ))}

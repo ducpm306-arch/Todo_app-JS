@@ -42,7 +42,7 @@ export class WorkRepository {
     const work = this.#Work.find((w) => w.getId === id);
     if (!work) return;
     work.setStatus(status);
-    this.#save;
+    this.#save();
   }
 
   delete(id) {
