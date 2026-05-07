@@ -38,8 +38,11 @@ export class WorkRepository {
     this.#save();
   }
 
-  update(work) {
-    this.#save();
+  changeStatus(id, status) {
+    const work = this.#Work.find((w) => w.getId === id);
+    if (!work) return;
+    work.setStatus(status);
+    this.#save;
   }
 
   delete(id) {

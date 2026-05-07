@@ -17,12 +17,15 @@ export function useWork() {
     e.target.reset();
   };
 
-  const updateWork = (e) => {};
+  const changeStatus = (id, status) => {
+    repo.changeStatus(id, status);
+    setWorks(repo.view());
+  };
 
   const deleteWork = (id) => {
     repo.delete(id);
     setWorks(repo.view());
   };
 
-  return { works, addWork, deleteWork };
+  return { works, addWork, deleteWork, changeStatus };
 }
