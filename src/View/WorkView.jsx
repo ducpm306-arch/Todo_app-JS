@@ -32,6 +32,13 @@ export default function WorkView({ works, onAdd, onDelete }) {
               <td>{w.getNote()}</td>
               <td>
                 <button onClick={() => onDelete(w.getId())}>Xóa</button>
+                <button
+                  onClick={() =>
+                    onUpdate(w.getName(), w.getDate(), w.getNote())
+                  }
+                >
+                  Sửa
+                </button>
               </td>
             </tr>
           ))}
