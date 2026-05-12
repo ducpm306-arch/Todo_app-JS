@@ -9,7 +9,7 @@ export default function App() {
       onAdd={addWork}
       onDelete={deleteWork}
       onStatusChange={changeStatus}
-      onSearch={searchWork}
+      onSubmit={searchWork}
     />
   );
 }

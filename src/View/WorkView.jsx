@@ -3,7 +3,7 @@ export default function WorkView({
   onAdd,
   onDelete,
   onStatusChange,
-  onSearch,
+  onSubmit,
 }) {
   return (
     <>
@@ -24,7 +24,7 @@ export default function WorkView({
         <button type="submit">Thêm</button>
       </form>
 
-      <form onSearch={onSearch}>
+      <form onSubmit={onSubmit}>
         <h2>Tìm kiếm công việc</h2>
         <br />
         Tìm kiếm: <input type="text" name="search" />
